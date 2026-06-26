@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Servidor Flask (API)",
+            "type": "python",
+            "request": "launch",
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "app.py",
+                "FLASK_DEBUG": "1"
+            },
+            "args": [
+                "run",
+                "--no-debugger"
+            ],
+            "jinja": true,
+            "presentation": {
+                "group": "clientes-api",
+                "order": 1
+            }
+        },
+        {
+            "name": "Python: Script Cliente (Pruebas)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/cliente.py",
+            "console": "integratedTerminal",
+            "presentation": {
+                "group": "clientes-api",
+                "order": 2
+            }
+        }
+    ]
+}
